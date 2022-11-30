@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      animation-name: move, fadeOut, changeColor;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes move {
+      from { left: 0; }
+      to   { left: 300px; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @keyframes changeColor {
+      from { background-color:cadetblue }
+      to   { background-color:blueviolet; }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

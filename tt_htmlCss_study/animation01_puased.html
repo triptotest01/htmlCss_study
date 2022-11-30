@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .box{
+    width: 150px;
+    height: 100px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    animation: my-loading 3s linear infinite alternate;
+    display: flex;
+    /* 가로측에서 중앙정렬 */
+    justify-content: center; 
+     /* 세로측에서 중앙정렬 */
+    align-items: center; 
+  }
+
+  .box::before{
+    content: "Loading";
+    font-size: 20px; 
+    font-weight: 700;  /* 700은 bold 와 같다*/ 
+  }
+
+  .box:hover{
+    animation-play-state: paused;
+    background-color: tomato;
+  }
+  .box:hover::before{
+    content:"Paused";
+    color:white;
+  }
+
+  @keyframes my-loading {
+    from{ width:150px; }
+    to{width: 100%;}
+  }
+
+  </style>
+</head>
+
+<body>
+
+ <div class="box"></div>
+
+</body>
+</html>

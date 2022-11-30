@@ -1,0 +1,19 @@
+
+ #a{ font-size: 1em}
+ #b{ font-size: 2em}
+
+
+ #box-rem{
+  font-size: 10px;
+  width: 10rem;
+  height:100px;
+  background-color: aquamarine;
+ }
+
+ #box-em{
+  font-size: 10px;
+  width: 10em;
+  height:100px;
+  background-color: burlywood;
+ }
+ 

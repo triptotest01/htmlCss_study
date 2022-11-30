@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .msg{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            border: 1px solid black;
+            padding:0.5em;
+            font-size: 1.5em;
+
+        }
+
+        .msg_text{
+            width:80%; /* calc(80%-100px); 는 width:80%;  버튼20% 가로길이보다 적은 100px로 줄이면 남은 여백이 브라우저늘릴때 보여서  */
+            height: 100%;
+            border:none;
+            resize:none;
+        }
+        .msg_text:focus{ outline:none; }
+        .msg_send{
+            width:100px;  /* width:20%; 에서 버튼의 가로길이는 고정, textarea만 브라우저 크기에 따라 변하게*/
+            height: 100%;
+            border-radius: 8px;;
+            background-color: gray;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="msg">
+        <textarea class="msg_text"></textarea>
+        <button class="msg_send">전송</button>
+    </div>
+
+</body>
+</html>

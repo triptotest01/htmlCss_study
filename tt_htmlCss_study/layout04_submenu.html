@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout header</title>
+
+    <style>
+        * {
+        margin:0;   /* 마진 리셋 */
+        padding:0;   /* 패딩 리셋 */
+        box-sizing: border-box;   /* 박스 영역은 테두리까지 포함한다 */ 
+        }
+          /* border-box를 적용하면 height 지정 크기값인 100px 에 padding 값이 포함이 된 상태, 
+                                         header와 nav가 100px 로 높이가 동일하고, 
+                                         nav에 height 100px 추가로 padding-top 20px로 지정하여도 border-box로 인해 padding 추가가 되어도 ( 원래라면 padding 크기만큼 공간 넓히게 됨 ) 
+                                         높이 100px안에 포함되어 header를 벗어나지 않게 된다.  */
+
+        header,nav,section,article,aside,footer{
+            display:block;
+            margin:3px;
+            background-color:burlywood;
+
+        }
+        header {width: 100%;  height: 100px; background-color:coral;}  /* 블록레벨은 width: 100% 할 필요 없다. 알아서 옆으로 자리를 차지하기 때문 */
+        nav{ height: 60px;  padding-top:20px; margin:0px auto; width:80%; background-color:yellow;}  /* border-box로 인해 height: 100px; padding-top:20px; 은 120px이 아니라 100px */
+        #topMenu{ display: flex; list-style: none; background-color: skyblue;} /* list-style: none; 은 ul 의 특수기호 삭제 */
+        #topMenu li{ float:left; position: relative;  /* 서브 메뉴를 absolute로 하기 위해, 이 부분을 relative로 */  
+            margin: 0px auto; width: 100px;  background-color:aquamarine; } /* margin: 0px auto; 는 상하여백은0px 좌우여백은 중간으로 자동정렬 */
+
+        div{ display: flex; height: 700px; }
+        section{ float:left; width:80%;} 
+        article{width:50%; background-color:beige;}
+        aside{float: left; width: 20%; margin-right: 0px;}
+        footer{height: 80px; overflow: hidden;}
+
+
+        #topMenu > li > ul { 
+            display: none; /* 서브 메뉴 처음에는 화면에 안 보이게 */ 
+            position:absolute;  /* 서브 메뉴 포지셔닝 */ 
+        }
+        #topMenu > li:hover > ul {
+         display: block;  /* 메인 메뉴 항목 위로 오버하면 서브 메뉴 표시 */
+        }
+
+        ul {list-style: none;}
+
+    </style>
+</head>
+
+<body>
+    <header> 
+        <nav>nav
+            <ul id="topMenu">
+                <li> 메뉴 
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                    </ul>
+                </li>
+                <li> 메뉴 </li>
+                <li> 메뉴 </li>
+                <li> 메뉴 </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div>
+    <section>
+     section
+        <article>article</article>
+    </section>
+    <aside>aside</aside>
+    </div>
+<footer>footer</footer>
+
+
+</body>
+</html>

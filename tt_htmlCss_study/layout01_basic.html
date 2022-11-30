@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Basic</title>
+
+    <style>
+
+        header,nav,section,article,aside,footer{
+            display:block;
+            margin:3px;
+            background-color:burlywood;
+
+        }
+        header { height: 100px;} /* 블록레벨은 설정안해도 width:100%; 라서 가로는 생략함*/
+        nav{ margin: 0px auto; width:80%; background-color:yellow;}
+        div{ display: flex; height: 700px; }
+        section{ float:left; width:80%;}
+        article{width:50%; background-color:beige;}
+        aside{float: left; width: 20%; margin-right: 0px;}
+        footer{height: 80px; overflow: hidden;}
+    </style>
+</head>
+
+<body>
+        <header>header
+            <nav>nav
+            </nav>
+        </header>
+        
+        <div>
+        <section>
+        section
+            <article>article</article>
+        </section>
+        <aside>aside</aside>
+        </div>
+        
+        <footer>footer</footer>
+
+</body>
+</html>

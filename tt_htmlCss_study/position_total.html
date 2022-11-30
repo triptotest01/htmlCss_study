@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel ="stylesheet" href=" "/> -->
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            border: 5px solid black;
+            padding: 40px;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div > Hello 1</div>
+    <div style ="position:relative;"> Hello 2
+        <div > Hello 3
+            <div>Hello 4</div>
+        
+
+            <!-- static 은 디폴트 값이라 설정을 안해도 스태틱이며, 
+            top, bottom, left, right 에 의한 이동이 적용되지 않는다  -->
+            <div style="
+                background-color:pink;
+
+                position: static;
+                left: 200px;
+                ">static</div>
+            
+            <!-- relative 는 자기가 원래 있었던 자리를 기준으로 두고 이동한다  -->
+            <div style="
+                background-color:red;
+
+                position: relative;
+                left: 200px;
+            ">relative</div>
+
+            <!-- absolute 와 fixed 공통점 : 공중부양 
+            absolute 와 fixed 차이점 : absolute는  static이 아닌 부모만 기준으로 이동 -->
+
+            <div style="
+                background-color:aqua;
+
+                position: absolute;
+                top: 0px;
+            ">absolute</div>
+           
+            <div style="     
+                background-color:beige;
+
+                position: fixed;
+                top: 0px;
+            ">fixed</div>
+            <div>Hello 5</div>
+        </div>
+    </div>
+    
+    <div>Hello 6</div>
+</body>
+
+</html>

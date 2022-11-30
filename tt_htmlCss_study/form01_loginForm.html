@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:300px;
+            margin:100px auto;
+        }
+        input, button{ 
+            width: 100%;
+            margin:5px;
+            border-radius: 5px;
+            border:1px solid;
+        }
+        input::placeholder{
+            text-align: center;
+        }
+        input:focus::placeholder{  
+            color:transparent;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- form 태그 속성종류 
+        action="폼 데이터가 전송될 url경로" 
+        method = "get" 또는 "post"     : 데이터 전송방식, url 노출여부 및 보안성비교 
+        autocomplete= "on" 또는"off"   : 자동입력 유무
+        target="_self" 또는 "_blank"  : 현재창, 새창 유무
+    -->
+    <div>
+        <form action="/login" method = "post">   <!-- <form action="/login" method = "post">  -->
+            <input type="text" placeholder="아이디" name="id">
+            <input type="text" placeholder="패스워드" name="password">
+            <button type="submit">로그인</button>
+        </form>
+    </div> 
+</body>
+</html>

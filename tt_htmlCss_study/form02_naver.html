@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .login-wrap{
+            font-family:fantasy;
+            font-size:28px;
+            width: 300px;
+            text-align:center;   /** div 박스 안에 있는 요소들이 가로 중앙 정렬 된다  **/
+            margin:100px auto;   /**  100px은 위로부터 이동거리, auto는 가로 자동으로 중앙정렬 ( 즉 margin: 세로 가로 배치를 의미) **/
+        }
+
+        .logo{
+            color:limegreen;
+        }
+
+        .login-input, .login-button {
+            width:100%;
+            margin: 10px 0px;
+            padding: 5px;
+            border: 1px solid;
+            border-radius: 5px;
+            box-sizing: border-box;
+          
+        }
+        .login-input{
+           
+        }
+
+        .login-button{
+          background-color:limegreen;
+          color:white;
+          cursor: pointer;
+         
+        }
+
+        input:hover{
+            border: 1px solid dodgerblue;
+            box-shadow: 0 0 5px dodgerblue;
+        }
+        /**input 창에 마우스 클릭시 placeholder 글자 안보이게! **/
+        input:focus::placeholder{  
+            color:transparent;
+        }
+
+    </style>
+</head>
+
+<body>  
+        <div class ="login-wrap">
+        <form action="/login" method = "post">
+            <h1 class="logo">N A V E R</h1>
+            <input class = "login-input" type ="text" placeholder="아이디">
+            <input class = "login-input" type ="password" placeholder="패스워드">
+            <button class = "login-button" type ="submit"  >로그인</button>
+        </form>
+        </div>     
+   
+</body>
+</html>

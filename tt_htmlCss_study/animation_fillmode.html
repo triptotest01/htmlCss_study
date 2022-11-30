@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+      .jb {
+        margin: 10px 0px;
+        width: 50%;
+        height: 50px;
+        background-color:tomato;
+      }
+      @keyframes run {
+        from {
+          width: 10%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      .jb {
+        animation-name: run;
+        animation-delay: 0.5s;
+        animation-duration: 10s;
+      }
+      .jb1 {
+        animation-fill-mode: none;
+      }
+      .jb2 {
+        animation-fill-mode: forwards;
+      }
+      .jb3 {
+        animation-fill-mode: backwards;
+      }
+      .jb4 {
+        animation-fill-mode: both;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="jb jb1"> none </div>
+    <div class="jb jb2"> forwards </div>
+    <div class="jb jb3"> backwards </div>
+    <div class="jb jb4"> both </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>      
+        .formBox{
+          width: 400px;
+          height: 100px;
+          background-color: burlywood;
+        }   
+        
+        .formBox2 { 
+          width: 200px;
+          height: 140px;
+          background-color: beige;
+
+        }
+ </style>
+</head>
+<body>
+
+   <!-- 부모요소에 style="text-align: center를 넣으면 자식요소가 중앙정렬되는 효과가 있다  -->
+     <!-- 1. checkbox 연습 -->
+      <form class="formBox" action="/bUrl">
+        <input type="checkbox" id="fruitId1" >
+        <label for="fruitId1"> apple </label>
+        <input type="checkbox" id="fruitId2" >
+        <label for="fruitId2"> kiwi </label>
+        <input type="checkbox" id="fruitId3" >
+        <label for="fruitId3"> orange </label><br><br>
+      <div style="text-align: center;"><input type="submit" value="전송"></div>
+      </form> <br><br><br>
+  <!-- 2. radio 연습 -->
+      <form class="formBox2" action="/aUrl" style="text-align: center;">  
+          <input type="radio" id="woman" name="gender">
+          <label for="woman"> 여성 </label> <br>
+          <input type="radio" id="man" name="gender">
+          <label for="man"> 남성 </label><br><br><br>
+
+          <input type="submit" value="전송">
+      </form> <br><br><br>
+
+  <!-- 3. date, datetime-local 활용하여 달력 생성하기      -->
+      
+      <input type="date"> <br><br><br>
+      <input type="datetime-local"><br><br><br>
+   
+  <!-- 4. number 를 활용하여 주문수량 범위를 1~5까지 만들기 -->
+  
+  <form action="/cUrl">
+    <lable for ="quantity"> 주문수량</lable>
+    <input type="number" id="quantity" min="1" max="5">
+    <input type="submit" value="제출">
+
+  </form>
+
+</body>
+</html>

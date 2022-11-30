@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    div{
+      position:absolute;
+      width: 100px;
+      height: 100px;
+      animation-name: move, fadeOut, changeColor;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes move {
+      from {left:0px;}
+      to{left: 300px;}
+    }
+
+    @keyframes fadeOut{
+      from {opacity: 1;}
+      to {opacity: 0;}
+    }
+
+    @keyframes changeColor{
+      from{ background-color: cadetblue;}
+      to{background-color: blueviolet;}
+    }
+    
+
+  </style>
+
+</head>
+<body>
+  <div></div>
+  
+</body>
+</html>

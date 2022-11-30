@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/inlinBlockSpanDiv.css"/>
+</head>
+
+<body>
+ <!--block level / vertical -->
+ <h3> 1. block level 세로정렬 = 한줄에 하나씩, 종류: div, p, h4등 h숫자 태그</h3>
+    <div></div>
+    <p>이것은 p태그, 위 div처럼 block은 글자를 적지 않아도 보여짐</p>
+    <h4> 이것은 h4 </h4>
+<!--inline level / horizontal -->
+
+<h3> 2-1. inline level 가로정렬 = 한줄에 여러개, 종류: span, a</h3>
+<h3> 2-2.inline에 크기를 넣고싶으면 display: inline-block 옵션을 추가하면됨</h3>
+    <span>inline 종류: span, a</span>
+    <span>inline= span / 내용물(ex 글자)이 없으면 안보여요</span>
+    <span>inline= span 는 width height 적용x, 내용물중심o</span>
+    <span>inline= span 는 margin, padding 좌우만 적용o, 상하 적용x </span>
+    
+    
+<!-- inline-block level : 한줄에 여러개 배치 O , 크기를 지정 O  -->
+
+<h3> 3. inline-block level : 한줄에 여러개 배치 O , 크기 O, margin padding 상하좌우 O</h3>
+
+    <input placeholder="input">
+    <button> button </button>
+    <select>  </select> 세번째 박스는 선택옵션을넣을수있는 select
+
+</body>
+</html>
